@@ -18,6 +18,8 @@ import Error from './Error';
 import Collapse from './Collapse';
 import FooterTwo from './FooterTow';
 // import {
+import Progress from './Progress';
+import Accordion from './Accordion';
 
 //   MDBIcon,
 // } from 'mdb-react-ui-kit';
@@ -43,10 +45,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </AppProvider>}
         >
           <Route index element={<div><Carousel /></div>} />
-          <Route path='team' element={<Modal  />} />
+          <Route path='team' element={<div><Modal  /><Progress /></div>} />
 
           <Route path='projects' element={<Collapse />}/>
-          <Route path='calendar' element={ <div><Header /><FooterTwo /></div>}/>
+          <Route path='calendar' element={ <div><Header /> <Accordion/><FooterTwo/></div>}/>
           <Route path='documents' element={<Carousel/>}/>
           <Route path='Messenger' element={<Carousel/>}/>
           
